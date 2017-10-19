@@ -1,8 +1,8 @@
 package archivos;
 import java.io.*;
 import java.util.Scanner;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+//import java.util.logging.Level;
+//import java.util.logging.Logger;
 
 public class Archivos {
 
@@ -13,6 +13,7 @@ public class Archivos {
         System.out.println("canRead returns " + f.canRead());
         System.out.println("Length returns " + f.length());
         System.out.println("getAbsolutePath returns " + f.getAbsolutePath());*/
+       
         String [] listaArchivos = null;
         System.out.println("Nombre del Archivo");
         String nombre = lectura.next();
