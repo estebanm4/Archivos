@@ -20,14 +20,21 @@ public class Archivos {
         File archivo = new File(nombre);
         if (archivo.exists()) {
             if (archivo.isDirectory()){
-                listaArchivos = archivo.list();
-                System.out.println("La carpeta tiene " + listaArchivos.length + " archivo(s)");
+                //listaArchivos = archivo.list();
+                //System.out.println("La carpeta tiene " + listaArchivos.length + " archivo(s)");
+                GestionArchivos gestion = new GestionArchivos();
+                gestion.listarArchivos(nombre);
             }
             System.out.println("Existe");
         } else {
             try {
-                archivo.createNewFile();
-                System.out.println(archivo.getAbsoluteFile());
+                PrintStream salida = new PrintStream(archivo);
+                salida.println("Hola");
+                
+                salida.flush();
+                salida.close();
+                //archivo.createNewFile();
+                //System.out.println(archivo.getAbsoluteFile());
             } catch (IOException ex) {
                 System.out.println("No se puede crear el Archivo" + ex.getMessage());
             }

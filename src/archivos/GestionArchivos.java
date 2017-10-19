@@ -11,7 +11,7 @@ public class GestionArchivos {
             } else {
                 lista = archivo.list();
                 for(String nombre : lista){
-                    this.listarArchivos(ruta+"/" + nombre );
+                    this.listarArchivos(ruta+"/" + nombre);
                 }
             }
         }
